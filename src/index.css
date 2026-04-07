@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-bg: #0A0E1A;
+  --color-brand-card: #1A1F2E;
+  --color-brand-card-hover: #242938;
+  --color-brand-border: #2A3040;
+  --color-brand-primary-start: #5B9FFF;
+  --color-brand-primary-end: #7B5FFF;
+  --color-brand-warning-start: #FFA726;
+  --color-brand-warning-end: #FF9500;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-bg text-white antialiased font-sans;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: linear-gradient(135deg, var(--color-brand-primary-start) 0%, var(--color-brand-primary-end) 100%);
+  }
+  .gradient-warning {
+    background: linear-gradient(135deg, var(--color-brand-warning-start) 0%, var(--color-brand-warning-end) 100%);
+  }
+  .text-gradient-primary {
+    background: linear-gradient(135deg, var(--color-brand-primary-start) 0%, var(--color-brand-primary-end) 100%);
+    @apply bg-clip-text text-transparent;
+  }
+  .glow-primary {
+    box-shadow: 0 0 10px rgba(91, 159, 255, 0.55);
+  }
+  .glow-warning {
+    box-shadow: 0 4px 20px rgba(255, 167, 38, 0.3);
+  }
+  .glass-icon {
+    background: linear-gradient(145deg, #1a2240, #0d1120);
+    box-shadow: 0 0 10px rgba(91, 159, 255, 0.55);
+    @apply rounded-[16px] border border-brand-border;
+  }
+  .task-item-glow:hover {
+    box-shadow: 0 0 20px rgba(91, 159, 255, 0.2);
+    @apply bg-brand-card-hover border-brand-primary-start/30;
+  }
+}
