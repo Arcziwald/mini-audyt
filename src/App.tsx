@@ -760,8 +760,8 @@ export default function App() {
           <div className="relative">
             <div className="absolute -inset-1 bg-gradient-to-r from-[#4facfe] to-[#9747ff] rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
             <img 
-              src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&w=200&h=200&auto=format&fit=crop" 
-              alt="ArtWebCraft Logo" 
+              src="logo_accounting_artwebcraft.png" 
+              alt="ArtWebCraft Accounting Logo" 
               className="relative w-12 h-12 rounded-full object-cover border border-white/10"
               referrerPolicy="no-referrer"
             />
@@ -803,9 +803,19 @@ export default function App() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.98 }}
-              className="text-center max-w-3xl"
+              className="text-center max-w-3xl flex flex-col items-center"
             >
-              <div className="inline-block px-4 py-1.5 mb-8 bg-[#5b7fff]/10 border border-[#5b7fff]/20 text-[#5b7fff] text-xs font-black uppercase tracking-[0.3em] rounded-full">
+              <div className="relative mb-10 group">
+                <div className="absolute -inset-4 bg-gradient-to-r from-[#4facfe] to-[#9747ff] rounded-full blur-2xl opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+                <img 
+                  src="logo_accounting_artwebcraft.png" 
+                  alt="ArtWebCraft Logo" 
+                  className="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-2 border-white/10 shadow-2xl"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+
+              <div className="inline-block px-6 py-2 mb-8 bg-[#5b7fff]/10 border border-[#5b7fff]/20 text-[#5b7fff] text-sm md:text-base font-black uppercase tracking-[0.3em] rounded-full">
                 {t.forOffices}
               </div>
               <h1 className="text-3xl md:text-5xl font-black text-white mb-6 tracking-tighter leading-[0.9]">
