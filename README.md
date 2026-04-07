@@ -1,5 +1,5 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="baner_mini-audyt.png" />
+<img width="1200" height="475" alt="GHBanner" src="baner-mini-audyt.png" />
 </div>
 
 # Run Locally
