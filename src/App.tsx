@@ -948,15 +948,37 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="relative z-10 py-12 text-center border-t border-white/5 mt-auto">
+      <footer className="relative z-10 py-12 text-center border-t border-white/5 mt-auto bg-black/20">
         <div className="max-w-4xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-left">
-            <p className="text-gray-600 text-xs font-black uppercase tracking-[0.4em] mb-2">© 2026 ArtWebCraft</p>
-            <p className="text-gray-500 text-sm font-semibold">{t.footerDesc}</p>
+            <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 mb-2">
+              <p className="text-gray-600 text-xs font-black uppercase tracking-[0.4em]">
+                © 2026 ArtWebCraft
+              </p>
+              <span className="hidden md:block text-gray-700">|</span>
+              <p className="text-gray-600 text-[10px] font-bold uppercase tracking-widest">
+                All Rights Reserved
+              </p>
+            </div>
+            <p className="text-gray-500 text-sm font-semibold">
+              Budujemy mosty między technologią a księgowością.
+            </p>
           </div>
-          <div className="flex space-x-8">
+          
+          <div className="flex flex-col md:flex-row gap-6 md:gap-12 items-start md:items-center">
             <div className="text-left">
-              <p className="text-xs font-black text-gray-600 uppercase tracking-widest mb-1">{t.contact}</p>
+              <p className="text-xs font-black text-gray-600 uppercase tracking-widest mb-1">Legal</p>
+              <a 
+                href="https://artwebcraft.com/polityka" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-sm font-bold text-[#5B9FFF] hover:text-white transition-colors underline decoration-[#5B9FFF]/30"
+              >
+                Privacy Policy
+              </a>
+            </div>
+            <div className="text-left">
+              <p className="text-xs font-black text-gray-600 uppercase tracking-widest mb-1">Contact</p>
               <p className="text-sm font-bold text-gray-400">accounting@artwebcraft.com</p>
             </div>
           </div>
