@@ -46,9 +46,9 @@ interface Question {
 
 const TRANSLATIONS = {
   PL: {
-    auditTitle: "Odzyskaj spokój",
-    auditSubtitle: "Indeks Przeciążenia Operacyjnego",
-    introDesc: "Sprawdź swój Indeks Przeciążenia Operacyjnego. Dowiedz się, czy Twój zespół jest merytorycznym wsparciem dla klientów, czy zakładnikiem ich chaosu.",
+    auditTitle: "Buduj Mosty,  Nie Mury",
+    auditSubtitle: "Twój Indeks Gotowości na Brakomat",
+    introDesc: "Sprawdź, ile energii ucieka przez brak automatycznego pomostu z klientem. Dowiedz się, jak Brakomat zamieni chaos w czysty zysk czasu.",
     startBtn: "Rozpocznij Diagnozę",
     diagnostics: "Diagnostyka",
     question: "Pytanie",
