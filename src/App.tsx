@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   ChevronRight, 
@@ -735,17 +735,23 @@ export default function App() {
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [selectedOption, setSelectedOption] = useState<'A' | 'B' | 'C' | null>(null);
   const [userEmail, setUserEmail] = useState('');
+  const timeoutRef = useRef<number | null>(null);
 
   const t = TRANSLATIONS[lang];
 
   const handleAnswer = (points: number, optionId: 'A' | 'B' | 'C') => {
     setSelectedOption(optionId);
-    
-    setTimeout(() => {
-      const newAnswers = { ...answers, [step]: points };
-      setAnswers(newAnswers);
-      setStep(step + 1);
+    const answerStep = step;
+
+    if (timeoutRef.current) {
+      window.clearTimeout(timeoutRef.current);
+    }
+
+    timeoutRef.current = window.setTimeout(() => {
+      setAnswers((prevAnswers) => ({ ...prevAnswers, [answerStep]: points }));
+      setStep((prevStep) => prevStep + 1);
       setSelectedOption(null);
+      timeoutRef.current = null;
     }, 400);
   };
 
@@ -762,6 +768,10 @@ export default function App() {
   }, [totalScore, lang]);
 
   const reset = () => {
+    if (timeoutRef.current) {
+      window.clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
     setStep(0);
     setAnswers({});
     setSelectedOption(null);
