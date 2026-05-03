@@ -301,26 +301,47 @@ const LeadForm = ({ onComplete, lang, score, answers, recommendedPackage }: { on
     
     try {
       // Webhook to n8n
-      await fetch('https://n8n.srv1151721.hstgr.cloud/webhook/mini-audyt', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name,
-          email,
-          score: Math.round((score / 70) * 100),
-          answers,
-          recommendedPackage,
-          lang,
-          timestamp: new Date().toISOString(),
-          gdprConsent: true
-        })
-      });
-    } catch (error) {
-      console.error('Webhook failed:', error);
-    } finally {
-      setIsSending(false);
-      onComplete(email);
-    }
+await fetch('https://n8n.srv1151721.hstgr.cloud/webhook/mini-audyt', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    name,
+    email,
+    score: Math.round((score / 70) * 100),
+    answers,
+    recommendedPackage,
+    lang,
+    timestamp: new Date().toISOString(),
+    gdprConsent: true
+  })
+});
+
+// --- DODANE KODY ŚLEDZENIA ZDARZEŃ ---
+// 1. Meta Pixel - Zdarzenie Lead
+if (typeof window !== 'undefined' && (window as any).fbq) {
+  (window as any).fbq('track', 'Lead', {
+    content_name: 'Mini Audyt Księgowy',
+    value: 0.00,
+    currency: 'PLN'
+  });
+}
+
+// 2. Google Tag Manager / GA4 - Zdarzenie Lead
+if (typeof window !== 'undefined' && (window as any).dataLayer) {
+  (window as any).dataLayer.push({
+    event: 'generate_lead',
+    form_name: 'mini_audyt_form',
+    package_recommended: recommendedPackage
+  });
+}
+// ------------------------------------
+
+} catch (error) {
+  console.error('Webhook failed:', error);
+} finally {
+  setIsSending(false);
+  onComplete(email);
+}
   };
 
   return (
