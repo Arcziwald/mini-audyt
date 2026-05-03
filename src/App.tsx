@@ -623,7 +623,7 @@ const ResultCard = ({ score, answers, onReset, lang, email }: { score: number, a
 
         <div className="space-y-6">
           <a 
-            href="https://client.accounting" 
+            href="https://client.accounting.artwebcraft.com" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center justify-center w-full py-5 px-8 gradient-warning hover:scale-[1.01] active:scale-[0.99] text-white font-black rounded-[16px] transition-all glow-warning group text-xl uppercase tracking-tight"
@@ -755,45 +755,47 @@ export default function App() {
       </div>
 
       {/* Navigation */}
-      <nav className="relative z-20 px-6 py-6 md:px-12 flex justify-between items-center border-b border-brand-border bg-brand-bg/80 backdrop-blur-md">
-        <div className="flex items-center space-x-4 group cursor-pointer" onClick={reset}>
-          <div className="relative">
-            <div className="absolute -inset-1 bg-gradient-to-r from-[#4facfe] to-[#9747ff] rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-            <img 
-              src="logo_accounting_artwebcraft.png" 
-              alt="ArtWebCraft Accounting Logo" 
-              className="relative w-12 h-12 rounded-full object-cover border border-white/10"
-              referrerPolicy="no-referrer"
-            />
-          </div>
-          <span className="font-black text-2xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-[#4facfe] to-[#9747ff]">
-            ArtWebCraft
-          </span>
-        </div>
+<nav className="relative z-20 border-b border-brand-border bg-brand-bg/80 backdrop-blur-md">
+  <div className="max-w-3xl mx-auto px-6 py-6 flex justify-between items-center">
+    <div className="flex items-center space-x-4 group cursor-pointer" onClick={reset}>
+      <div className="relative">
+        <div className="absolute -inset-1 bg-gradient-to-r from-[#4facfe] to-[#9747ff] rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+        <img 
+          src="logo_accounting_artwebcraft.png" 
+          alt="ArtWebCraft Accounting Logo" 
+          className="relative w-12 h-12 rounded-full object-cover border border-white/10"
+          referrerPolicy="no-referrer"
+        />
+      </div>
+      <span className="font-black text-2xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-[#4facfe] to-[#9747ff]">
+        ArtWebCraft
+      </span>
+    </div>
 
-        <div className="flex items-center space-x-6">
-          {/* Language Switcher Pill */}
-          <div className="bg-black/40 p-1 rounded-full border border-brand-border flex items-center">
-            <button 
-              onClick={() => setLang('EN')}
-              className={`px-3 py-1 text-xs font-black rounded-full transition-all ${lang === 'EN' ? 'gradient-primary text-white glow-primary' : 'text-gray-500 hover:text-gray-300'}`}
-            >
-              EN
-            </button>
-            <button 
-              onClick={() => setLang('PL')}
-              className={`px-3 py-1 text-xs font-black rounded-full transition-all ${lang === 'PL' ? 'gradient-primary text-white glow-primary' : 'text-gray-500 hover:text-gray-300'}`}
-            >
-              PL
-            </button>
-          </div>
-          
-          <div className="hidden sm:flex items-center space-x-2">
-            <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
-            <span className="text-xs font-black text-emerald-500 uppercase tracking-widest">{t.systemLive}</span>
-          </div>
-        </div>
-      </nav>
+    <div className="flex items-center space-x-6">
+      {/* Language Switcher Pill */}
+      <div className="bg-black/40 p-1 rounded-full border border-brand-border flex items-center">
+        <button 
+          onClick={() => setLang('EN')}
+          className={`px-3 py-1 text-xs font-black rounded-full transition-all ${lang === 'EN' ? 'gradient-primary text-white glow-primary' : 'text-gray-500 hover:text-gray-300'}`}
+        >
+          EN
+        </button>
+        <button 
+          onClick={() => setLang('PL')}
+          className={`px-3 py-1 text-xs font-black rounded-full transition-all ${lang === 'PL' ? 'gradient-primary text-white glow-primary' : 'text-gray-500 hover:text-gray-300'}`}
+        >
+          PL
+        </button>
+      </div>
+      
+      <div className="hidden sm:flex items-center space-x-2">
+        <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
+        <span className="text-xs font-black text-emerald-500 uppercase tracking-widest">{t.systemLive}</span>
+      </div>
+    </div>
+  </div>
+</nav>
 
       <main className="relative z-10 flex-grow flex items-center justify-center px-6 py-8 md:py-16">
         <AnimatePresence mode="wait">
@@ -808,7 +810,7 @@ export default function App() {
               <div className="relative mb-10 group">
                 <div className="absolute -inset-4 bg-gradient-to-r from-[#4facfe] to-[#9747ff] rounded-full blur-2xl opacity-20 group-hover:opacity-40 transition duration-1000"></div>
                 <img 
-                  src="logo_accounting_artwebcraft.png" 
+                  src="/logo_accounting_artwebcraft.png" 
                   alt="ArtWebCraft Logo" 
                   className="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-2 border-white/10 shadow-2xl"
                   referrerPolicy="no-referrer"
