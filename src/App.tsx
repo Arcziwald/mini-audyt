@@ -598,7 +598,7 @@ const ResultCard = ({ score, answers, onReset, lang, email }: { score: number, a
           <p className="text-brand-primary-start font-bold tracking-tight">{email}</p>
         </div>
 
-        <div className="grid grid-cols-3 gap-4 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
           <div className="bg-black/40 rounded-2xl p-4 border border-white/5">
             <p className="text-xs font-black text-gray-500 uppercase tracking-widest mb-1">{t.indexLabel}</p>
             <p className="text-2xl font-black text-gradient-primary tracking-tighter">{percentage}%</p>
