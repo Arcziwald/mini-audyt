@@ -46,7 +46,7 @@ interface Question {
 
 const TRANSLATIONS = {
   PL: {
-    auditTitle: "Buduj Mosty,  Nie Mury",
+    auditTitle: "Zbudujmy Most",
     auditSubtitle: "Twój Indeks Gotowości na Brakomat",
     introDesc: "Sprawdź, ile energii ucieka przez brak automatycznego pomostu z klientem. Dowiedz się, jak Brakomat zamieni chaos w czysty zysk czasu.",
     startBtn: "Rozpocznij Diagnozę",
@@ -113,7 +113,7 @@ const TRANSLATIONS = {
     indexLabel: "Indeks"
   },
   EN: {
-    auditTitle: "Build Bridges, Not Walls",
+    auditTitle: "Let's build a bridge",
     auditSubtitle: "Your Brakomat Readiness Index",
     introDesc: "Check how much energy is leaking due to the lack of an automated bridge with your clients. Discover how Brakomat turns chaos into pure time profit.",
     startBtn: "Start Diagnosis",
