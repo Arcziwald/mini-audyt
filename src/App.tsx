@@ -108,14 +108,14 @@ const TRANSLATIONS = {
     gdprConsent: "Wyrażam zgodę na przetwarzanie danych w celu otrzymania raportu i ofert ArtWebCraft",
     gdprError: "Bez zgody na przetwarzanie adresu e-mail nie możemy wygenerować i przesłać indywidualnego raportu z diagnozą.",
     successHeader: "Twoja diagnoza operacyjna jest gotowa!",
-    successCTA: "SPRAWDŹ BEZPŁATNE DEMO",
+    successCTA: "WEJDŹ NA MOST: SPRAWDŹ DEMO BRAKOMATU",
     timeLossLabel: "Strata Czasu",
     indexLabel: "Indeks"
   },
   EN: {
-    auditTitle: "Regain Peace",
-    auditSubtitle: "Operational Overload Index",
-    introDesc: "Find out how much time your team loses on \"raising\" clients instead of substantive work.",
+    auditTitle: "Build Bridges, Not Walls",
+    auditSubtitle: "Your Brakomat Readiness Index",
+    introDesc: "Check how much energy is leaking due to the lack of an automated bridge with your clients. Discover how Brakomat turns chaos into pure time profit.",
     startBtn: "Start Diagnosis",
     diagnostics: "Diagnostics",
     question: "Question",
@@ -175,7 +175,7 @@ const TRANSLATIONS = {
     gdprConsent: "I consent to the processing of my data to receive the report and ArtWebCraft offers",
     gdprError: "Without consent to process your email address, we cannot generate and send an individual diagnosis report.",
     successHeader: "Your operational diagnosis is ready!",
-    successCTA: "CHECK FREE DEMO",
+    successCTA: "CROSS THE BRIDGE: TRY THE BRAKOMAT DEMO",
     timeLossLabel: "Time Loss",
     indexLabel: "Index"
   }
