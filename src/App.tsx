@@ -78,17 +78,17 @@ const TRANSLATIONS = {
     profileATitle: "Drobne nieszczelności",
     profileADesc: "Twoja organizacja jest solidna, ale istnieją drobne punkty zapalne, które można łatwo zautomatyzować.",
     packageAName: "Asystent Dokumentów",
-    packageAPrice: "399 PLN / mc",
+    packageAPrice: "negocjuj",
     
     profileBTitle: "Przeciążenie operacyjne",
     profileBDesc: "Twój zespół spędza zbyt dużo czasu na „pogoni” za dokumentami. Potrzebujesz głębokiego uporządkowania procesów.",
     packageBName: "Pakiet Porządkujący",
-    packageBPrice: "799 PLN / mc",
+    packageBPrice: "negocjuj",
     
     profileCTitle: "Stan alarmowy / Chaos",
     profileCDesc: "Operacyjne przeciążenie zagraża efektywności Twojego biura. Wymagana jest natychmiastowa transformacja i pełna automatyzacja.",
     packageCName: "Pakiet Operacyjny",
-    packageCPrice: "1599 PLN / mc",
+    packageCPrice: "negocjuj",
     
     ctaSystem: "ZOBACZ JAK DZIAŁA SYSTEM ARTWEBCRAFT",
     ctaBtn: "Chcesz odzyskać te godziny?",
@@ -145,17 +145,17 @@ const TRANSLATIONS = {
     profileATitle: "Minor Leaks",
     profileADesc: "Your organization is solid, but there are minor friction points that can be easily automated.",
     packageAName: "Document Assistant",
-    packageAPrice: "399 PLN / mo",
+    packageAPrice: "nnegotiate",
     
     profileBTitle: "Operational Overload",
     profileBDesc: "Your team spends too much time 'chasing' documents. You need deep process reorganization.",
     packageBName: "Cleanup Package",
-    packageBPrice: "799 PLN / mo",
+    packageBPrice: "negotiate",
     
     profileCTitle: "Emergency State / Chaos",
     profileCDesc: "Operational overload threatens your office's efficiency. Immediate transformation and full automation are required.",
     packageCName: "Operational Package",
-    packageCPrice: "1599 PLN / mo",
+    packageCPrice: "negotiate",
     
     ctaSystem: "SEE HOW THE ARTWEBCRAFT SYSTEM WORKS",
     ctaBtn: "Want to regain those hours?",
