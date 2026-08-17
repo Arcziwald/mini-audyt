@@ -145,7 +145,7 @@ const TRANSLATIONS = {
     profileATitle: "Minor Leaks",
     profileADesc: "Your organization is solid, but there are minor friction points that can be easily automated.",
     packageAName: "Document Assistant",
-    packageAPrice: "nnegotiate",
+    packageAPrice: "negotiate",
     
     profileBTitle: "Operational Overload",
     profileBDesc: "Your team spends too much time 'chasing' documents. You need deep process reorganization.",
@@ -762,9 +762,8 @@ export default function App() {
   const recommendedPackage = useMemo(() => {
     const percentage = Math.round((totalScore / 70) * 100);
     if (percentage >= 76) return TRANSLATIONS[lang].packageCName;
-    if (percentage >= 41) return TRANSLATIONS[lang].packageBName;
-    if (percentage >= 11) return TRANSLATIONS[lang].packageAName;
-    return TRANSLATIONS[lang].packageIdealName;
+    if (percentage <= 40) return TRANSLATIONS[lang].packageAName;
+    return TRANSLATIONS[lang].packageBName;
   }, [totalScore, lang]);
 
   const reset = () => {
